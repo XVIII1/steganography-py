@@ -1,13 +1,5 @@
 import numpy
 from PIL import Image
-from dataclasses import dataclass, field, asdict
-
-@dataclass
-class Resource:
-    path: str   = field(default=None)
-    data: bytes = field(default=b'')
-    msg: bytes  = field(default=b'')
-    def __repr__(self): return "<Resource: %r >" % asdict(self)
 
 
 def Encode(src, msg, dest):
